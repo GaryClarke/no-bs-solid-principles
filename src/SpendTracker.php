@@ -9,7 +9,7 @@ class SpendTracker {
     private int $currentSpending = 0;
 
     public function __construct(
-        private Mailer $mailer
+        private Notifier $notifier
     ) {
     }
 
@@ -18,13 +18,8 @@ class SpendTracker {
         $this->currentSpending += $amount;
 
         if ($this->currentSpending > $this->maxBudget) {
-            $this->notify('Budget limit exceeded');
+            $this->notifier->notify('Budget limit exceeded');
         }
-    }
-
-    public function notify($message): void
-    {
-        $this->mailer->sendMail($message);
     }
 
     public function getCurrentSpending(): int
