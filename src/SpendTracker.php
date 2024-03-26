@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App;
 
 class SpendTracker {
-    private int $maxBudget = 1000;
+    private int $maxBudget;
     private int $currentSpending = 0;
 
     public function __construct(
@@ -25,5 +25,15 @@ class SpendTracker {
     public function notify($message): void
     {
         $this->mailer->sendMail($message);
+    }
+
+    public function getCurrentSpending(): int
+    {
+        return $this->currentSpending;
+    }
+
+    public function setMaxBudget(int $maxBudget): void
+    {
+        $this->maxBudget = $maxBudget;
     }
 }
