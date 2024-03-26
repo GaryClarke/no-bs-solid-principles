@@ -2,27 +2,27 @@
 
 declare(strict_types=1);
 
-namespace src;
+namespace App;
 
-class BudgetTracker {
+class SpendTracker {
     private int $maxBudget = 1000;
     private int $currentSpending = 0;
 
     public function __construct(
         private Mailer $mailer
     ) {
-
     }
 
     public function trackSpending($amount): void
     {
         $this->currentSpending += $amount;
+
         if ($this->currentSpending > $this->maxBudget) {
-            $this->sendNotification('Budget limit exceeded');
+            $this->notify('Budget limit exceeded');
         }
     }
 
-    public function sendNotification($message): void
+    public function notify($message): void
     {
         $this->mailer->sendMail($message);
     }
