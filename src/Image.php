@@ -12,6 +12,7 @@ class Image implements HtmlElementInterface
 
     public function toHtml(): string
     {
+        // // <a html="https://www.garyclarke.tech"><img src="https://placehold.co/300x300" /></a>
         return "<img src='{$this->src}' />";
     }
 }
