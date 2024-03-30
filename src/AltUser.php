@@ -6,8 +6,8 @@ namespace App;
 
 class AltUser extends User
 {
-    public function getEmail(): string
+    public function getEmail(): Email
     {
-        return $this->getUsername();
+        return $this->getUsername(); # now becomes impossible to break LSP this way 💪
     }
 }

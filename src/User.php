@@ -7,12 +7,12 @@ namespace App;
 class User
 {
     public function __construct(
-        private string $email,
+        private Email $email,
         private string $username
     ) {
     }
 
-    public function getEmail(): string
+    public function getEmail(): Email
     {
         return $this->email;
     }
