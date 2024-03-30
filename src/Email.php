@@ -17,7 +17,7 @@ readonly class Email
     public function __construct(string $email)
     {
         if (!$this->isValidEmail($email)) {
-            throw new InvalidArgumentException("Invalid email address.");
+            throw new InvalidArgumentException('Invalid email address.');
         }
 
         $this->email = $email;
