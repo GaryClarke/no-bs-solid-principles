@@ -10,7 +10,7 @@ require_once 'vendor/autoload.php';
 # A module should be responsible to one, and only one, actor
 # A class should have only one reason to change
 
-# Solves the problem of tight coupling and change chains..among other things
+# Solves the problem of God objects, tight coupling and change chains..among other things
 
 $budgetTracker = new SpendTracker(new Mailer());
 
