@@ -7,8 +7,8 @@ namespace App;
 class LinkDecorator extends HtmlDecorator
 {
     public function __construct(
-        protected HtmlElementInterface $element,
-        private string $url
+        private string $url,
+        HtmlElementInterface $element
     ) {
         parent::__construct($element);
     }
