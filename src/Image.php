@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App;
 
-class Image implements HtmlElementInterface
+final class Image implements HtmlElementInterface
 {
     public function __construct(private string $src)
     {
