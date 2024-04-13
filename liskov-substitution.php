@@ -2,23 +2,16 @@
 
 require_once 'vendor/autoload.php';
 
-use App\User;
-use App\AltUser;
 use App\Email;
+use App\AltUser;
+use App\User;
 
-function sendWelcomeEmail(User $user): void
-{
-    $email = $user->getEmail();
-    // Logic to send email to the $email address
-    echo "Sending email to " . $email . "\n";
+function loginUser(User $user) {
+    echo 'Logging in user with ' . $user->getEmail();
 }
 
 # Can only be created with a valid email address
 $email = new Email('info@garyclarke.tech');
 
 # Can only be created with an Email type
-$user = new AltUser($email, '@garyclarketech');
-
-sendWelcomeEmail($user);
-
-
+$user = new User($email, '@garyclarketech');
