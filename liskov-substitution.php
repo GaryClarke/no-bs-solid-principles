@@ -3,7 +3,6 @@
 require_once 'vendor/autoload.php';
 
 use App\Email;
-use App\AltUser;
 use App\User;
 
 function loginUser(User $user) {
