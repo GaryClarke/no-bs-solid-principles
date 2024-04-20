@@ -2,24 +2,15 @@
 
 namespace App;
 
-use Exception;
-
 class FileReader implements FileOperationInterface
 {
-    public function read(string $filename)
+    public function read(string $filename): string
     {
-        // Some implementation details
 
-        echo 'Reading ' . $filename . PHP_EOL;
     }
 
-    public function write($content): void
+    public function delete(string $filename): void
     {
-        throw new Exception("Cannot perform this operation.");
-    }
 
-    public function delete(): void
-    {
-        throw new Exception("Cannot perform this operation.");
     }
 }
