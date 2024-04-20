@@ -14,6 +14,7 @@ use App\FileArchiverInterface;
 # - Prevents a class carrying unwanted dependencies and methods which it does not use.
 # - Keeps code robust and easy to maintain
 # - Reduces the risk of bugs due to changes in unrelated methods affecting classes that shouldn't logically be affected.
+# - More likely to adhere to Single Responsibility
 
 function archiveFile(string $source, string $destination, FileArchiverInterface $fileArchiver)
 {
