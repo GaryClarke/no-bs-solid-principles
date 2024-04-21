@@ -16,6 +16,10 @@ use App\FileArchiverInterface;
 # - Reduces the risk of bugs due to changes in unrelated methods affecting classes that shouldn't logically be affected.
 # - More likely to adhere to Single Responsibility
 
+$fileArchiver = new \App\FileArchiver();
+
+archiveFile('example.txt', 'example.txt.gz', $fileArchiver);
+
 function archiveFile(string $source, string $destination, FileArchiverInterface $fileArchiver)
 {
     $content = $fileArchiver->read($source);
