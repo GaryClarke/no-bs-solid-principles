@@ -6,11 +6,11 @@ namespace App;
 
 class OrderProcessor
 {
-    private FileLogger $logger;
+    private LoggerInterface $logger;
 
-    public function __construct()
+    public function __construct(LoggerInterface $logger)
     {
-        $this->logger = new FileLogger();
+        $this->logger = $logger;
     }
 
     public function processOrder(array $orderData): array

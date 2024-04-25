@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App;
 
-class DatabaseLogger
+class DatabaseLogger implements LoggerInterface
 {
     public function log(string $message): void
     {

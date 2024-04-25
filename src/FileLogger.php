@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App;
 
-class FileLogger
+class FileLogger implements LoggerInterface
 {
     public function log(string $message): void
     {
