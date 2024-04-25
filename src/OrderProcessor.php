@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App;
 
-class OrderProcessor {
-
+class OrderProcessor
+{
     private FileLogger $logger;
 
     public function __construct()
