@@ -2,7 +2,7 @@
 From [garyclarke.tech](https://www.garyclarke.tech)
 
 ### The Mission!
-SOLID principles ain't easy to understand. They are worded in a way which feels ambiguous and confusing. So I created [this YouTube video]() in order to help you understand what they really mean and what problems they solve or prevent.
+SOLID principles ain't easy to understand. They are worded in a way which feels ambiguous and confusing. So I created [this YouTube video](https://youtu.be/lkRJ9h8EQo0) in order to help you understand what they really mean and what problems they solve or prevent.
 
 This repo contains the code that you see me use in the video. 
 
